@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+    <title>Transformer Information Page</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Transformer Information Page </h1>
+            <hr>
+
+            <p>Wellcome to Transformer Page.</p>
+            <ul>
+                <li>User First Name:{{user_first_name}}</li>
+                <li>User Last Name: {{ user_last_name }}</li>
+            </ul>
+            <ul>
+                 <li>{{info}}</li>
+                <li>Trafo Name: {{trafo}}</li>
+                <li>Trafo Power: {{ trafopow }} {{unit}}</li>
+                <li>Trafo Cable Length: {{ trafo_cable_len }} {{unit_cable}}</li>
+                <li>Trafo Cable Constant: {{ trafo_cable_const }} </li>
+            </ul>
+                    <form action="/" method="get">
+                           <p>Trafo Name</p> 
+                        <li><input type="text" id ="trafo_name" name="trafo_name"></li>
+                        <br>
+                           <p>Trafo Power</p>
+                        <li><input type="text" id ="trafo_power" name="trafo_power"></li>
+                        <br>
+                        <p>
+                        <p>Trafo Cable Length</p>
+                        <li><input type="text" id ="trafo_cable_length" name="trafo_cable_length"></li>
+                        <br>
+                        <p>Trafo Cable Constant</p>
+                        <li><input type="text" id ="trafo_cable_const" name="trafo_cable_const"></li>
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="Transformer Entery">
+                    </form>
+                    <br>
+                     <button onclick="window.location.href='/send'">
+                                    Button
+                     </button>
+                     <br>
+            <p>Ranging over days of week:</p>
+            <ul>
+                {{range k, v := dow}}
+                <li>{{k}} {{v}}</li>
+                  {{end}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
