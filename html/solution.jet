@@ -21,7 +21,7 @@
             <p>Ranging over Transformers:</p>
             <ul>
                 {{range k, v := trafolar}}
-                <li>{{k}} {{v}}</li>
+                <li>{{k}} {{v.TrafoName}}</li>
                 
                   {{end}}
             </ul>
